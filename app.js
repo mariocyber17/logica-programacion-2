@@ -14,4 +14,10 @@ console.log(fahrenheit)
 let kelvin = temperatura + 273.15;
 console.log(kelvin)
 */
-
+let formulario= document.getElementById('formulario');//para escuchar el evento "submit" y evitar que recargue
+// Escuchamos el envío del formulario
+formulario.addEventListener("submit", function(evento) {
+    
+    // Evita que la página se recargue
+    evento.preventDefault();
+});
