@@ -14,6 +14,9 @@ console.log(fahrenheit)
 let kelvin = temperatura + 273.15;
 console.log(kelvin)
 */
+
+
+
 let formulario= document.getElementById('formulario');//para escuchar el evento "submit" y evitar que recargue
 // Escuchamos el envío del formulario
 let inputCelsius = document.getElementById('input-celsius');
@@ -34,7 +37,7 @@ formulario.addEventListener("submit", function(evento) {
         return; //para detener la función    
 
     }
-    console.log(valorTrim);
+    
     
     let temperatura=Number(valorTrim); //para convertir el valor a nuúmero
     if(isNaN(temperatura)){
@@ -45,5 +48,9 @@ formulario.addEventListener("submit", function(evento) {
         return; //para detener la función 
 
     }
-
+    let valorFahrenheit= ((temperatura*9/5)+32);
+    let valorKelvin= (temperatura+273.15);
+    mensajeError.textContent ="";
+    resultadoFahrenheit.textContent='Temperatura en Fahrenheit : '+ valorFahrenheit;
+    resultadoKelvin.textContent='Temperatura en Kelvin : '+ valorKelvin;
 });
